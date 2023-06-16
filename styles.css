@@ -26,13 +26,19 @@ html {
 
 body {
     font-family: Roboto, sans-serif;
+    line-height: 1.35;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 .logo {
@@ -44,16 +50,28 @@ body {
 .nav-items { 
     display: flex;
     list-style: none;
+    text-align: right;
     & .nav-item {
         padding-right: 2rem;
+
     }
+}
+
+.nav-item:last-child {
+    padding-right: 0;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .hero {
     display: flex;
     flex-direction: row;
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
     gap: 2rem;
+    margin: 0 auto;
 
 }
 .hero-text {
@@ -61,6 +79,8 @@ body {
     & h1 {
         font-size: 48px;
         font-weight: 900;
+        line-height: 1;
+        margin-bottom: .5rem;
     }
     & p {
         font-size: 18px;
@@ -75,15 +95,24 @@ body {
     flex: 1;
     background-color: #6D747D;
     text-align: center;
+
 }
 
-.nav, .hero, .footer {
+.nav, .hero, footer {
     background-color: #1f2937;
     color: #f9faf8;
 }
 
 .btn {
     background-color: #3882f6;
+    color: white;
+    padding: .5rem 3rem;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    margin-top: .75rem;
+
 }
 section {
     display: flex;
@@ -95,14 +124,15 @@ section {
     font-size: 36px;
     color: #1f2937;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0 .75rem 0;
 }
 
 .illustration-container {
     display: flex;
     max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 5rem;
+    padding: 2rem 2rem 5rem 2rem;
+    gap: 2rem;
 }
 .illustration {
     flex: 1;
@@ -110,15 +140,20 @@ section {
 }
 
 .drawing {
-    height: 100px;
-    width: 100px;
+    width: 98%;
+    aspect-ratio: 1;
     border: 2px solid #3882f6;
     border-radius: 8px;
     margin: 0 auto;
 }
 
+.caption {
+    margin-top: .5rem;
+}
+
 .quote {
     background-color: #e5e7eb;
+    padding: 4rem;
     & .quote-text {
         font-size: 36px;
         font-style: italic;
@@ -127,6 +162,31 @@ section {
     }
 }
 
+.attribution {
+    text-align: right;
+    font-weight: 600;
+    font-size: 24px;
+}
+.cta {
+    padding: 4rem;
+}
 .cta-container {
     background-color: #3882f6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    & h3 {
+        font-weight: 600;
+    }
+    & .btn {
+        border: 2px solid white;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 auto;
 }
